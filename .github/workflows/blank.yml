@@ -15,21 +15,21 @@ jobs:
       - name: Switch to source branch
         run: |
           git fetch origin
-          git checkout source-branch-name
+          git checkout feature/workflow
 
       # Step 3: Copy the file
       - name: Copy file
         run: |
-          cp path/to/file ./destination-path
+          cp /testing/demo/kl.txt ./testing/sample/
 
       # Step 4: Switch to the target branch
       - name: Switch to target branch
         run: |
-          git checkout target-branch-name
+          git checkout dev
 
       # Step 5: Add and commit the changes
       - name: Commit changes
         run: |
-          git add ./destination-path
+          git add ./testing/sample/
           git commit -m "Copy file from source branch to target branch"
-          git push origin target-branch-name
+          git push origin dev
