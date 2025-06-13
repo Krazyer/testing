@@ -20,7 +20,7 @@ jobs:
       # Step 3: Copy the file
       - name: Copy file
         run: |
-          cp demo/kl.txt .sample/
+          cp demo/kl.txt sample/
 
       # Step 4: Switch to the target branch
       - name: Switch to target branch
