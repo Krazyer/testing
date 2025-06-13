@@ -25,11 +25,11 @@ jobs:
       # Step 4: Switch to the target branch
       - name: Switch to target branch
         run: |
-          git checkout dev
+          git checkout main
 
       # Step 5: Add and commit the changes
       - name: Commit changes
         run: |
           git add ./testing/sample/
           git commit -m "Copy file from source branch to target branch"
-          git push origin dev
+          git push origin main
